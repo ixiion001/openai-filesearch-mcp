@@ -1,0 +1,37 @@
+{
+  "name": "filesearch-mcp-server",
+  "version": "1.0.0",
+  "description": "FastMCP server for OpenAI File Search",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "tsc -w & node --watch dist/server.js",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "mcp",
+    "fastmcp",
+    "openai",
+    "file-search"
+  ],
+  "author": "Cline",
+  "license": "MIT",
+  "dependencies": {
+    "fastmcp": "^1.22.4",
+    "zod": "^3.24.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "@types/node": "^22.14.1",
+    "@typescript-eslint/eslint-plugin": "^8.31.0",
+    "@typescript-eslint/parser": "^8.31.0",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.31.0"
+  }
+}
