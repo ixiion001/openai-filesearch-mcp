@@ -184,8 +184,9 @@ async function main() {
           }
 
           if (!response.ok) {
-            // Throw structured error for non-OK responses to be caught below
-            throw await toMcpError(response);
+            // For non-OK responses throw the raw response object so the
+            // surrounding catch block can convert it via `toMcpError`.
+            throw response;
           }
 
           // --- SUCCESS PATH ---
